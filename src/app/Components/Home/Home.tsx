@@ -11,7 +11,7 @@ const Home = () => {
                 <div className='flex flex-col gap-6 lg:w-[50%] w-[85%]'>
                     <h6 className='bg-gradient-to-r from-purple-500 to-pink-400 w-full lg:w-max p-2 px-4 rounded-3xl tracking-widest uppercase text-zinc-50 font-semibold'>Introduzindo a RG-Agency</h6>
                     <h1 className='my-4 lg:text-8xl text-7xl uppercase font-bold '>Pensar & <br />Criar</h1>
-                    <p className='text-xl font-bold text-justify my-2'>Nós ajudamos você a conectar sua marca ao sucesso, pare de <span className='text-pink-500'>desperdiçar tempo e dinheiro em campanhas publicitárias falhas e ineficazes</span></p>
+                    <p className='text-xl font-bold text-justify my-2'>Nós ajudamos você a conectar sua marca ao sucesso, pare de <span className='text-zinc-400'>desperdiçar tempo e dinheiro em campanhas publicitárias falhas e ineficazes</span></p>
                     <Link href="/">
                         <p className='p-4 text-sm border-zinc-800 border-2 rounded-3xl w-max font-bold uppercase my-4 hover:bg-zinc-950 hover:text-zinc-50 ease-in duration-300'>Vamos Conectar</p>
                     </Link>
