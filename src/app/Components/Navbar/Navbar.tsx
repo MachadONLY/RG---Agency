@@ -12,7 +12,7 @@ const Navbar = () => {
     const[nav, setNav] = useState(false)
 
     const handleNav = () => {
-        setNav(true)   
+        setNav(!nav)   
     }
 
   return (
@@ -22,19 +22,19 @@ const Navbar = () => {
             <div>
                 <ul className='hidden md:flex'>
                     <Link href="/">
-                        <li className='ml-10 text-sm font-bold uppercase hover:border-b py-2'>Home</li>
+                        <li className='ml-10 text-sm font-bold uppercase hover:border-b hover:border-purple-500  py-2'>Home</li>
                     </Link>
                     <Link href="/">
-                        <li className='ml-10 text-sm font-bold uppercase hover:border-b py-2'>About</li>
+                        <li className='ml-10 text-sm font-bold uppercase hover:border-b hover:border-purple-500  py-2'>About</li>
                     </Link>
                     <Link href="/">
-                        <li className='ml-10 text-sm font-bold uppercase hover:border-b py-2'>Projects</li>
+                        <li className='ml-10 text-sm font-bold uppercase hover:border-b hover:border-purple-500  py-2'>Projects</li>
                     </Link>
                     <Link href="/">
-                        <li className='ml-10 text-sm font-bold uppercase hover:border-b py-2'>News</li>
+                        <li className='ml-10 text-sm font-bold uppercase hover:border-b hover:border-purple-500  py-2'>News</li>
                     </Link>
                     <Link href="/">
-                        <li className='ml-10 text-sm font-bold uppercase hover:border-b py-2 p-3 border border-zinc-950 rounded-3xl hover:bg-zinc-900 hover:text-zinc-50 ease-in duration-300'>Contact</li>
+                        <li className='ml-10 text-sm font-bold uppercase hover:border-b hover:border-purple-500  py-2 p-3 border border-zinc-950 rounded-3xl hover:bg-zinc-900 hover:text-zinc-50 ease-in duration-300'>Contact</li>
                     </Link>
                 </ul>
                 <div onClick={handleNav} className='md:hidden'>
@@ -54,11 +54,11 @@ const Navbar = () => {
                     </div>
                     
                     <div className='border-b border-gray-400 my-4'>
-                        <p className='w-[85%] md:w-[90%] py-4'>Lets build something legendary together</p>
+                        <p className='w-full md:w-[90%] py-4'>Comprometidos com o seu Sucesso</p>
                     </div>
                 </div>
-                <div className='py-4 flex flex-col'>
-                    <ul className='uppercase'>
+                <div className='py-12 flex flex-col justify-center items-center'>
+                    <ul className='uppercase flex flex-col justify-center items-center'>
                         <Link href="/">
                             <li className='py-4 text-sm'>Home</li>
                         </Link>
@@ -75,9 +75,9 @@ const Navbar = () => {
                             <li className='py-4 text-sm'>Contact</li>
                         </Link>
                     </ul>
-                    <div className='pt-40 '>
+                    <div className='pt-32 flex flex-col justify-center items-center '>
                         <p className='uppercase tracking-widest text-[#5651e5]'>Lets Connect</p>
-                        <div className='flex items-center justify-between my-6 w-[80%] lg:w-[60%]'>
+                        <div className='flex items-center justify-between my-6 w-full gap-4'>
                             <div className='rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:scale-125 ease-in duration-300 hover:bg-[#5651e5] hover:text-zinc-50'>
                                 <FaInstagram/>
                             </div>

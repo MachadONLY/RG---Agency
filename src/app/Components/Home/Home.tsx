@@ -9,7 +9,7 @@ const Home = () => {
         <div className='mx-auto max-w-[1240px] w-full h-full p-2'>
             <div className='flex my-32 flex-col justify-center items-center lg:flex-row gap-12'>
                 <div className='flex flex-col gap-6 lg:w-[50%] w-[85%]'>
-                    <h6 className='bg-gradient-to-r from-purple-500 to-pink-400 w-full lg:w-max p-2 px-4 rounded-3xl tracking-widest uppercase text-zinc-50 font-semibold'>Introduzindo a RG-Agency</h6>
+                    <h6 className='bg-gradient-to-r from-[#6265eb] to-[#f15454] w-full lg:w-max p-2 px-4 rounded-3xl tracking-widest uppercase text-zinc-50 font-semibold'>Introduzindo a RG-Agency</h6>
                     <h1 className='my-4 lg:text-8xl text-7xl uppercase font-bold '>Pensar & <br />Criar</h1>
                     <p className='text-xl font-bold text-justify my-2'>Nós ajudamos você a conectar sua marca ao sucesso, pare de <span className='text-zinc-400'>desperdiçar tempo e dinheiro em campanhas publicitárias falhas e ineficazes</span></p>
                     <Link href="/">
