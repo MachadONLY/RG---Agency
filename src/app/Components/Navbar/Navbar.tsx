@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className='fixed w-full h-20 z-[100] bg-white/90'>
-        <div className='flex justify-between items-center max-w-[1240px] mx-auto w-full h-full my-2 2xl:px-16'>
+        <div className='flex justify-between items-center max-w-[1240px] mx-auto w-full h-full my-2 px-6  2xl:px-16'>
             <Image src={Hero} alt='RG Agency logo' width={70}/>
             <div>
                 <ul className='hidden md:flex'>
