@@ -32,8 +32,8 @@ const Team = () => {
 
   return (
     <div className="w-full h-[700px]">
-      <div className="lg:w-full max-w-[1240px] mx-auto h-full mt-[650px] lg:mt-0 ">
-        <h1 className="font-extrabold uppercase text-3xl my-12 ml-5">Nossos Serviços</h1>
+      <div className="lg:w-full max-w-[1240px] mx-auto h-full mt-[650px] md:mt-[500px] lg:mt-0 ">
+        <h1 className="font-extrabold uppercase text-3xl my-12 ml-5 lg:ml-0">Nossos Serviços</h1>
         <div className="lg:grid grid-cols-3 gap-8 lg:gap-0 flex flex-col justify-center items-center mx-auto">
 
           <motion.div
