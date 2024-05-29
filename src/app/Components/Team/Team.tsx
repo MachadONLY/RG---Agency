@@ -1,67 +1,112 @@
 "use client";
 
-import React from "react";
-import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
-import Profile from "../../../../public/assets/Profile.svg";
-import Image from "next/image";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { BsEmojiAngry } from "react-icons/bs";
+import { CgWebsite } from "react-icons/cg";
+import { FaLinkedin } from "react-icons/fa";
+import { LiaAdSolid } from "react-icons/lia";
+import { LuMousePointerClick } from "react-icons/lu";
+import { MdOutlineWeb } from "react-icons/md";
+import { SiGoogleanalytics } from "react-icons/si";
+import { useInView } from "react-intersection-observer";
 
-interface TeamMemberProps {
-  name: string;
-  role: string;
-  bio: string;
-}
+const Team = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
 
-const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio }) => {
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
   return (
-    <div className="w-[275px] h-[60%] bg-zinc-100 shadow-2xl rounded-2xl flex flex-col items-center">
-      <div className="w-[85%] flex flex-col items-center">
-        <Image
-          src={Profile}
-          alt={`Profile of ${name}`}
-          width={150}
-          className="shadow-xl rounded-full mb-6 shadow-gray-500 my-4 border-4 border-zinc-200"
-        />
-        <h1 className="text-xl uppercase font-semibold">{name}</h1>
-        <span className="text-[#6265eb] my-1 uppercase">{role}</span>
-        <p className="text-justify my-2">{bio}</p>
+    <div className="w-full h-[700px]">
+      <div className="lg:w-full max-w-[1240px] mx-auto h-full mt-[650px] lg:mt-0 ">
+        <h1 className="font-extrabold uppercase text-3xl my-12 ml-5">Nossos Serviços</h1>
+        <div className="lg:grid grid-cols-3 gap-8 lg:gap-0 flex flex-col justify-center items-center mx-auto">
 
-        <div className="flex gap-3 my-8">
-          <SocialIcon icon={<FaInstagram />} />
-          <SocialIcon icon={<FaTwitter />} />
-          <SocialIcon icon={<FaFacebook />} />
-          <SocialIcon icon={<FaTiktok />} />
+          <motion.div
+            ref={ref}
+            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            initial="hidden"
+            animate={controls}
+            variants={cardVariants}
+          >
+            <div className="rounded-full p-2 w-16 h-16 bg-zinc-950 flex justify-center items-center">
+              <LiaAdSolid className="text-zinc-50 w-full h-full" />
+            </div>
+            <h1 className="uppercase font-semibold mt-2">Social Media Ads</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, dicta.</p>
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            initial="hidden"
+            animate={controls}
+            variants={cardVariants}
+          >
+            <div className="rounded-full p-2 w-16 h-16 bg-zinc-950 flex justify-center items-center">
+              <CgWebsite className="text-zinc-50 w-full h-full" />
+            </div>
+            <h1 className="uppercase font-semibold mt-2">SEO Otimizado</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, dicta.</p>
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            initial="hidden"
+            animate={controls}
+            variants={cardVariants}
+          >
+            <div className="rounded-full p-3 w-16 h-16 bg-zinc-950 flex justify-center items-center">
+              <LuMousePointerClick className="text-zinc-50 w-full h-full" />
+            </div>
+            <h1 className="uppercase font-semibold mt-2">Design Gráfico</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, dicta.</p>
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer mt-0 lg:mt-12 p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            initial="hidden"
+            animate={controls}
+            variants={cardVariants}
+          >
+            <div className="rounded-full p-2 w-16 h-16 bg-zinc-950 flex justify-center items-center">
+              <MdOutlineWeb className="text-zinc-50 w-full h-full" />
+            </div>
+            <h1 className="uppercase font-semibold mt-2">Criação de Website</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, dicta.</p>
+          </motion.div>
+
+          <motion.div
+            ref={ref}
+            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer mt-0 lg:mt-12 p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            initial="hidden"
+            animate={controls}
+            variants={cardVariants}
+          >
+            <div className="rounded-full p-4 w-16 h-16 bg-zinc-950 flex justify-center items-center">
+              <SiGoogleanalytics className="text-zinc-50 w-full h-full" />
+            </div>
+            <h1 className="uppercase font-semibold mt-2">Análise de dados e relatórios</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, dicta.</p>
+          </motion.div>
+
         </div>
-      </div>
-    </div>
-  );
-};
-
-interface SocialIconProps {
-  icon: React.ReactNode;
-}
-
-const SocialIcon: React.FC<SocialIconProps> = ({ icon }) => {
-  return (
-    <div className="rounded-full shadow-xl shadow-gray-400 p-3 cursor-pointer hover:scale-125 ease-in duration-300 hover:bg-[#5651e5] hover:text-zinc-50">
-      {icon}
-    </div>
-  );
-};
-
-const Team: React.FC = () => {
-  return (
-    <div className="w-full h-screen">
-      <div className="w-full gap-20 my-[800px] lg:my-0 md:my-[400px] mx-auto max-w-[1240px] h-full flex flex-col md:flex-row justify-center items-center">
-        <TeamMember
-          name="Ruan Gabriel"
-          role="CEO"
-          bio="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos adipisci a laborum voluptatum, soluta non nam maxime qui dolore nulla!"
-        />
-        <TeamMember
-          name="Gabriel Machado"
-          role="Co-founder"
-          bio="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos adipisci a laborum voluptatum, soluta non nam maxime qui dolore nulla!"
-        />
       </div>
     </div>
   );
