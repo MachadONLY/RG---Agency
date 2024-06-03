@@ -38,7 +38,7 @@ const Team = () => {
 
           <motion.div
             ref={ref}
-            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            className="w-[365px] hover:bg-customBlue/60 hover:border-2 hover:text-zinc-50 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
             initial="hidden"
             animate={controls}
             variants={cardVariants}
@@ -52,7 +52,7 @@ const Team = () => {
 
           <motion.div
             ref={ref}
-            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            className="w-[365px] hover:bg-customBlue/60 hover:border-2 hover:text-zinc-50 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
             initial="hidden"
             animate={controls}
             variants={cardVariants}
@@ -66,7 +66,7 @@ const Team = () => {
 
           <motion.div
             ref={ref}
-            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            className="w-[365px] hover:bg-customBlue/60 hover:border-2 hover:text-zinc-50 hover:border hover:border-zinc-400 cursor-pointer p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
             initial="hidden"
             animate={controls}
             variants={cardVariants}
@@ -80,7 +80,7 @@ const Team = () => {
 
           <motion.div
             ref={ref}
-            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer mt-0 lg:mt-12 p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            className="w-[365px] hover:bg-customBlue/60 hover:border-2 hover:text-zinc-50 hover:border hover:border-zinc-400 cursor-pointer mt-0 lg:mt-12 p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
             initial="hidden"
             animate={controls}
             variants={cardVariants}
@@ -94,7 +94,7 @@ const Team = () => {
 
           <motion.div
             ref={ref}
-            className="w-[365px] hover:bg-black/10 hover:border hover:border-zinc-400 cursor-pointer mt-0 lg:mt-12 p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
+            className="w-[365px] hover:bg-customBlue/60 hover:border-2 hover:border-violet-300 hover:text-zinc-50  cursor-pointer mt-0 lg:mt-12 p-6 flex flex-col h-[211px] border-2 rounded-xl shadow-xl gap-2"
             initial="hidden"
             animate={controls}
             variants={cardVariants}
